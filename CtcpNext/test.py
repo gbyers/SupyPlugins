@@ -1,5 +1,5 @@
 ###
-# Copyright (c) 2014, James Lu
+# Copyright (c) 2015, James Lu
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,14 +30,8 @@
 
 from supybot.test import *
 
+class CtcpNextTestCase(PluginTestCase):
+    plugins = ('CtcpNext',)
 
-class FMLTestCase(PluginTestCase):
-    plugins = ('FML',)
-
-    if network:
-        def testFML(self):
-            self.assertNotError('fml')
-            self.assertNotError('fml 13273746')
-            self.assertError('fml 1') # This one doesn't exist
 
 # vim:set shiftwidth=4 tabstop=4 expandtab textwidth=79:
